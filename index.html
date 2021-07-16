@@ -55,67 +55,76 @@
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js?s=224323"></script>
     <script>
     async function sendShare() {
-        const result = await liff.shareTargetPicker([{
-            "type": "flex",
-            "altText": "ทดสอบการโพสหน่อยครับ",
-            "contents": {
-                "type": "bubble",
-                "hero": {
-                    "type": "image",
-                    "url": "https://www.img.in.th/images/ea6bbb86231f6f7b16223413a10ab7d5.png",
-                    "size": "full",
-                    "aspectRatio": "1:1",
-                    "action": {
-                        "type": "uri",
-                        "uri": "https://bit.ly/3dP9Ph2"
-                    }
-                },
-                "body": {
-                    "type": "box",
-                    "layout": "vertical",
-                    "contents": [{
-                            "type": "text",
-                            "text": "MagicGame88",
-                            "size": "lg",
-                            "weight": "bold",
-                            "align": "center"
-                        },
-                        {
-                            "type": "text",
-                            "text": "ทดสอบการโพส!!",
-                            "size": "sm",
-                            "align": "center",
-                            "color": "#555555",
-                            "wrap": true
-                        }
-                    ]
-                },
-                "footer": {
-                    "type": "box",
-                    "layout": "horizontal",
-                    "spacing": "md",
-                    "contents": [{
-                            "type": "button",
-                            "style": "primary",
-                            "action": {
-                                "type": "uri",
-                                "label": "สมัครสมาชิก!!",
-                                "uri": "http://www.marpostonline.pro"
-                            }
-                        },
-                        {
-                            "type": "button",
-                            "style": "primary",
-                            "action": {
-                                "type": "uri",
-                                "label": "แชร์เลย!!",
-                                "uri": "https://liff.line.me/1656222902-wElpRWpN"
-                            }
-                        }
-                    ]
-                }
-            }
-        }])
+        const result = await liff.shareTargetPicker([
+            
+            {
+  "type": "bubble",
+  "size": "mega",
+  "direction": "ltr",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Header",
+        "align": "center",
+        "contents": []
+      }
+    ]
+  },
+  "hero": {
+    "type": "image",
+    "url": "https://vos.line-scdn.net/bot-designer-template-images/bot-designer-icon.png",
+    "size": "full",
+    "aspectRatio": "1.51:1",
+    "aspectMode": "fit"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "แชร์ข้อความทดสอบ",
+        "align": "center",
+        "contents": []
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "horizontal",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "สมัคร",
+          "uri": "https://linecorp.com"
+        },
+        "height": "md",
+        "style": "primary",
+        "gravity": "bottom",
+        "position": "relative"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "แชร์",
+          "uri": "https://liff.line.me/1656222902-wElpRWpN"
+        },
+        "color": "#E75F13FF",
+        "style": "primary",
+        "gravity": "center",
+        "position": "relative"
+      }
+    ]
+  }
+}
+            
+       ])
         if (result) {
             liff.closeWindow()
         } else {
